@@ -1,0 +1,45 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-image: url('../img/lyftcms.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center -80px;
+}
+.logo{
+	margin-top: 60px;
+	text-align: center;
+}
+.logo img{
+	width: 17%;
+}
+.btn-rosa {
+  color: white;
+  background-color: #FF00BF;
+  width: 45%;
+  height: 50%;
+  font-size: 20px;
+}
+.botones{
+	width: 40%;
+	text-align: center;
+	position: absolute;
+	bottom: 40px;
+}
+@media only screen and (max-width: 768px){
+.logo{
+	margin-top: 40px; 
+}
+.logo img{
+	width: 60%;
+}
+.botones{
+	width: 100%;
+}
+body{
+	background-size: 300%;
+	background-position: center 0;
+}
+}
