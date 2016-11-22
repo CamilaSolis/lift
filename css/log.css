@@ -1,9 +1,10 @@
 *{
 	margin: 0;
 	padding: 0;
+	color:#545454;
 }
 body{
-	background-color: #FFE7F9;
+	background-color: #f7feff;
 }
 .lyft{
 	color: #FF00BF;
