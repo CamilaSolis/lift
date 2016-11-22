@@ -29,6 +29,9 @@ a {
   height: 50%;
   font-size: 20px;
 }
+.imglog{
+	width: 100%;
+}
 @media only screen and (max-width: 768px){
 	.form-group{
 		width: 90%;
