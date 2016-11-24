@@ -8,5 +8,22 @@ body{
 .num{
 	width: 100%;
 }
+.botones{
+	text-align: center;
+}
+.btn-rosa {
+  color: white;
+  background-color: #FF00BF;
+  width: 80%;
+  height: 50%;
+  font-size: 20px;
+}
 @media only screen and (max-width: 768px){
+	.numerico{
+		width: 80%;
+		margin: 20px auto 20px auto;
+	}
+	input{
+		width: 100%;
+	}
 }
