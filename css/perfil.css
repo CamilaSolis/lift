@@ -1,11 +1,3 @@
-*{
-	margin: 0;
-	padding: 0;
-	color:#545454;
-}
-body{
-	background-color: #f7feff;
-}
 @media only screen and (max-width: 768px){
 	.imgperfil{
 		background-image: url('../img/OGMFWE0.jpg');
@@ -24,8 +16,7 @@ body{
 		top: 15px;
 	}
 	.btn-rosa {
-		color: white;
-		background-color: #f062b2;
+		font-size: 15px;
 		width: 30%;
 		height: 30px;
 		position: absolute;

@@ -1,11 +1,3 @@
-*{
-	margin: 0;
-	padding: 0;
-	color:#545454;
-}
-body{
-	background-color: #f7feff;
-}
 .lyft{
 	color: #FF00BF;
 }
@@ -22,13 +14,6 @@ a {
 }
 .botones{
 	text-align: center;
-}
-.btn-rosa {
-  color: white;
-  background-color: #FF00BF;
-  width: 80%;
-  height: 50%;
-  font-size: 20px;
 }
 .imglog{
 	width: 100%;
