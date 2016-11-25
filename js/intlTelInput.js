@@ -1107,5 +1107,5 @@
             areaCodes: c[4] || null
         };
     }
-    $("#demo").intlTelInput();
 });
+$("#demo").intlTelInput();
