@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>BoobsClock</title>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/comun.css">
+	<link rel="stylesheet" type="text/css" href="css/dmenu.css">
+	<link rel="stylesheet" type="text/css" href="css/gps.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+</head>
+<body>
+	<header>
+		<div class="menu_bar">
+			<a href="#" class="bt-menu"><span class="fa fa-bars"></span>Menu</a>
+		</div>
+		<nav>
+			<ul>
+				<div class="perfil"><img src="img/OGMFWE0.jpg" class="img-circle">
+					<div class="nombre">Mariana & Clara</div></div>
+					<div class="fecha">5 Meses</div>
+					<li><a href="boobs.html"><span class="fa fa-venus"></span>Registro de lactancia</a></li>
+					<li><a href="#"><span class="fa fa-clock-o"></span>Cronometro</a></li>
+					<li><a href="gps.html"><span class="fa fa-street-view"></span>Boobs Friendly</a></li>
+					<li class="submenu">
+						<a href="#"><span class="fa fa-heart"></span>Tips<span class="caret icon-arrow-down6"></span></a>
+						<ul class="children">
+							<li><a href="tips1.html">¿Qué es la mastitis?<span class="icon-dot"></span></a></li>
+							<li><a href="tips2.html">Consejos<span class="icon-dot"></span></a></li>
+							<li><a href="tips3.html">Cuidados<span class="icon-dot"></span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div id="map"></div>
+		<div id="localizacion">
+		</div>
+		<div id="floating-panel">
+      <input id="address" type="textbox" value="Laboratoria, Santiago">
+      <input id="submit" type="button" value="Buscar">
+    <script>
+// Note: This example requires that you consent to location sharing when
+// prompted by your browser. If you see the error "The Geolocation service
+// failed.", it means you probably did not give permission for the browser to
+// locate you.
+
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: -33.4190452, lng: -70.6417096},
+    zoom: 17
+  });
+  var geocoder = new google.maps.Geocoder();
+
+ 
+
+
+
+  // Try HTML5 geolocation.
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+
+        var marker = new google.maps.Marker({
+    position: pos,
+    map: map,
+    title: 'Hello World!'
+  });
+      map.setCenter(pos);
+    }, function() {
+      handleLocationError(true, infoWindow, map.getCenter());
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, infoWindow, map.getCenter());
+
+  }
+   document.getElementById('submit').addEventListener('click', function() {
+    geocodeAddress(geocoder, map);
+  });
+
+
+function geocodeAddress(geocoder, resultsMap) {
+  var address = document.getElementById('address').value;
+  geocoder.geocode({'address': address}, function(results, status) {
+    if (status === google.maps.GeocoderStatus.OK) {
+      resultsMap.setCenter(results[0].geometry.location);
+ var marker = new google.maps.Marker({
+        map: resultsMap,
+        position: results[0].geometry.location
+      });
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+
+}
+
+var infoWindow = new google.maps.InfoWindow({map:map});
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+
+
+  infoWindow.setPosition(pos);
+
+  infoWindow.setContent(browserHasGeolocation ?
+                        'Error: La Geolocalizacion fallo.' :
+                        'Error: Su navegador no sopurta la Geolocalizacion.');
+}
+
+}
+//menu
+$(document).ready(main);
+ 
+var contador = 1;
+ 
+function main () {
+	$('.menu_bar').click(function(){
+		if (contador == 1) {
+			$('nav').animate({
+				left: '0'
+			});
+			contador = 0;
+		} else {
+			contador = 1;
+			$('nav').animate({
+				left: '-100%'
+			});
+		}
+	});
+ 
+	// Mostramos y ocultamos submenus
+	$('.submenu').click(function(){
+		$(this).children('.children').slideToggle();
+	});
+}
+    </script>
+	<script 
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDtSxKpHBVch6aPe7KYMFfS5vaqliExk4&callback=initMap" async defer>
+</script>
+</body>
+</html>

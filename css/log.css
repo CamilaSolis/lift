@@ -1,5 +1,5 @@
 .lyft{
-	color: #FF00BF;
+	color: #ff407b;
 }
 a {
 	text-decoration: none;
@@ -9,14 +9,21 @@ a {
 }
 .caja{
 	margin: auto;
-	width: 80%;
+	width: 30%;
 		margin-bottom: 15px;
 }
 .botones{
 	text-align: center;
 }
+.btn{
+	width: 30%;
+}
 .imglog{
-	width: 100%;
+	width: 30%;
+	margin: 15px 0 15px 0
+}
+header{
+	text-align: center;
 }
 @media only screen and (max-width: 768px){
 	.form-group{
@@ -25,4 +32,13 @@ a {
 	.terminos{
 		width: 90%;
 	}
+	.imglog{
+	width: 90%;
+}
+.btn{
+	width: 90%;
+}
+.caja{
+	width: 90%;
+}
 }

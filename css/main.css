@@ -4,42 +4,43 @@
 	color:#545454;
 }
 body{
-	background-image: url('../img/lyftcms.jpg');
+	background-color: #d1d3d4;
+	background-image: url(../img/lyft-diy_905.jpg);
 	background-repeat: no-repeat;
 	background-size: 100%;
-	background-position: center -80px;
+	background-position: center 0;
 }
 .logo{
-	margin-top: 60px;
+	margin-top: 40px;
 	text-align: center;
 }
 .logo img{
-	width: 17%;
+	width: 10%;
 }
 .btn-rosa {
-  color: white;
-  background-color: #FF00BF;
-  width: 45%;
+  width: 20%;
   height: 50%;
   font-size: 20px;
 }
 .botones{
 	width: 40%;
-	text-align: center;
 	position: absolute;
 	bottom: 40px;
+	width: 100%;
+	text-align: center;
 }
 @media only screen and (max-width: 768px){
 .logo{
-	margin-top: 40px; 
+	margin-top: 30px; 
 }
 .logo img{
-	width: 60%;
+	width: 40%;
 }
-.botones{
-	width: 100%;
+.btn-rosa{
+	width: 45%;
 }
 body{
+	background-image: url(../img/lyft-diy_905celu.jpg);
 	background-size: 300%;
 	background-position: center 0;
 }

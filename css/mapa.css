@@ -1,0 +1,30 @@
+
+.titulo{
+	color:white;
+	background-color: #ff00bf;
+	font-size: 40px;
+	font-family: Helvetica;
+	height: 100px;
+	text-align: center;
+}
+html, body { 
+	height: 100%; 
+	margin: 0; 
+	padding: 0; 
+}
+#map { 
+	height: 100%; 
+}
+#floating-panel {
+	position: absolute;
+	bottom: 10px;
+	left: 25%;
+	z-index: 5;
+	background-color: #ff00bf;
+	padding: 5px;
+	border-radius: 5px;
+	text-align: center;
+	font-family: 'Helvetica','sans-serif';
+	line-height: 30px;
+	padding-left: 10px;
+}

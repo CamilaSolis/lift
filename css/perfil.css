@@ -1,12 +1,11 @@
-@media only screen and (max-width: 768px){
-	.imgperfil{
+.imgperfil{
 		background-image: url('../img/OGMFWE0.jpg');
 		background-repeat: none;
 		height: 250px;
 		background-size: 100%;
 		background-position: 0 15%;
-		border-top: 10px solid #ff00bf;
-		border-bottom: 10px solid #ff00bf;
+		border-top: 10px solid #ff407b;
+		border-bottom: 10px solid #ff407b;
 	}
 	.menu{
 		color: #f062b2;
@@ -37,4 +36,5 @@
 		padding-top:15px;
 		padding-bottom: 15px;
 	}
+	@media only screen and (max-width: 768px){
 }
