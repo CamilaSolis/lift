@@ -25,6 +25,9 @@ a {
 header{
 	text-align: center;
 }
+#emailOK{
+	text-align: center;
+}
 @media only screen and (max-width: 768px){
 	.form-group{
 		width: 90%;

@@ -1,6 +1,6 @@
 $('#formulario-bandera').on('submit', function(e){
     // primero traemos el numero
-    var numero = $('#mobile-number').val();
+    var numero = $('#demo').val();
     
     // vemos si numero cumple o no los requisitos
     if (numero.length >= 9) {
@@ -21,7 +21,7 @@ $('#formulario-bandera').on('submit', function(e){
 $(document).ready(function(){ 
   $('#mobile-number').submit(function(ev){  
 
-        var num = $('#mobile-number').val();
+        var num = $('#demo').val();
 
         localStorage.setItem("number", num);
         

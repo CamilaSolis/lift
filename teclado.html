@@ -21,17 +21,25 @@
 		<img src="img/numero.png">
 		</div>
 	</header>
+	<form id="formulario-bandera" action="log.html">
 	<section>
 	<div class="numerico">
-		<input class="form-control" type="tel" id="demo" placeholder="">
+		<input class="form-control" type="tel" id="demo" placeholder="e.g. +1 702 123 4567" onKeyPress="return soloNumeros(event)">
+		<div class="text-center msj-error" align=center>
+     <!-- <input type="tel"  id="mobile-number"  pattern="^[9|8|7|6]\d{8}$" placeholder="e.g. +1 702 123 4567"> -->
+     <span id="valid-msg" class="hide">✓ Valid</span>
+     <span id="error-msg" class="hide">Número Inválido</span>
+   </div>
 		</div>
 	</section>
 	<section>
-	<div class="botones">
-	<a href="log.html" type="button" class="btn btn-rosa">Siguiente</a>
-	</div>
+	<div class="caja-next botones">
+			<input type="submit" value="Siguiente" class="btn btn-rosa">
+		</div>
 	</section>
+	</form>
 	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="js/teclado.js"></script>
 	<script src="js/intlTelInput.js"></script>
 </body>
 </html>
