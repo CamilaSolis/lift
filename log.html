@@ -13,18 +13,19 @@
 <body>
 	<header>
 	<div class="row head">
-		<div class="titulo"><i class="fa fa-angle-left" aria-hidden="true"></i>Regístrate</div>
+		<div class="titulo"></i>Regístrate</div>
 		<div class="subtitulo">Unete ahora para obtener créditos gratis</div>
 		</div>
 		<img class="imglog" src="img/login.png">
 	</header>
+	<form class="form-signup">
 	<div class="input-group margin-bottom-sm caja">
 		<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-		<input class="form-control" type="text" placeholder="Email address">
+		<input id="input-email" class="form-control" type="text" placeholder="Email address">
 	</div>
 	<div class="input-group caja">
 		<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-		<input class="form-control" type="password" placeholder="Password">
+		<input id="input-password" class="form-control" type="password" placeholder="Password">
 	</div>
 	<div class="checkbox caja">
 		<label>
@@ -32,8 +33,10 @@
 		</label>
 	</div>
 	<div class="botones">
-		<a href="perfil.html" type="button" class="btn btn-rosa">Siguiente</a>
+		<a href="perfil.html" type="submit" class="btn btn-rosa">Siguiente</a>
 	</div>
+	</form>
+	 <script type='text/javascript' src='js/main.js'></script>
 </body>
 </html>
 
