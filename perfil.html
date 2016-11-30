@@ -2,20 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/lyft-logo.png">
     <title>Lyft</title>
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/dmenu.css">
     <link rel="stylesheet" type="text/css" href="css/comun.css">
     <link rel="stylesheet" type="text/css" href="css/perfil.css">
 </head>
 <body>
-	<header>
+<header>
+		<div class="menu_bar">
+			<a href="#" class="bt-menu"><span class="fa fa-bars"></span>Menú</a>
+		</div>
+ 
+		<nav>
+		<div class="perfil">
+		<img class="img-circle" src="img/OGMFWE0.jpg">
+		Mercedes
+		</div>
+
+			<ul>
+				<li><a href="index.html"><span class="fa fa-map-marker"></span>Home</a></li>
+				<li><a href="#"><span class="fa fa-gift"></span>Viajes Gratis</a></li>
+				<li><a href="#"><span class="fa fa-clock-o"></span>Historial</a></li>
+				<li><a href="#"><span class="fa fa-credit-card"></span>Formas de pago</a></li>
+				<li><a href="#"><span class="fa fa-question"></span>Ayuda</a></li>
+				<li><a href="#"><span class="fa fa-cogs"></span>Configuración</a></li>
+				<li><a href="#"><span class="fa fa-car"></span>Regístrate para conducir</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section>
 		<div class="imgperfil row">
-		<i class="fa fa-bars menu" aria-hidden="true"></i>
 		<button type="button" class="btn btn-rosa">Editar Perfil</button>
 		</div>
-	</header>
+	</section>
 	<section>
 		<div class="nom">Mercedes
 		</div>
@@ -23,7 +46,18 @@
 	<section>
 		<div class="inicio">Se unió en Septiembre de 2016
 		</div>
+		<div class="datos">
+		<i class="fa fa-home" aria-hidden="true"></i>  Vive en la ciudad de <span class="rosa">Santiago</span>
+		</div>
+		<div class="datos">
+		<i class="fa fa-music" aria-hidden="true"></i>  Escucha a <span class="rosa">The Beatles</span>
+		</div>
+		<div class="datos">
+		<i class="fa fa-user" aria-hidden="true"></i>  Me gustan los perros
+		</div>
 	</section>
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript" src="js/dmenu.js"></script>
 </body>
 </html>
 

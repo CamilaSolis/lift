@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/lyft-logo.png">
+    <title>Lyft</title>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/dmenu.css">
+    <link rel="stylesheet" type="text/css" href="css/comun.css">
+    <link rel="stylesheet" type="text/css" href="css/viaje.css">
+</head>
+<body>
+<header>
+		<div class="menu_bar">
+			<a href="#" class="bt-menu"><span class="fa fa-bars"></span>Menú</a>
+		</div>
+ 
+		<nav>
+		<div class="perfil">
+		<img class="img-circle" src="img/OGMFWE0.jpg">
+		Mercedes
+		</div>
+			<ul>
+				<li><a href="index.html"><span class="fa fa-map-marker"></span>Home</a></li>
+				<li><a href="#"><span class="fa fa-gift"></span>Viajes Gratis</a></li>
+				<li><a href="#"><span class="fa fa-clock-o"></span>Historial</a></li>
+				<li><a href="#"><span class="fa fa-credit-card"></span>Formas de pago</a></li>
+				<li><a href="#"><span class="fa fa-question"></span>Ayuda</a></li>
+				<li><a href="#"><span class="fa fa-cogs"></span>Configuración</a></li>
+				<li><a href="#"><span class="fa fa-car"></span>Regístrate para conducir</a></li>
+			</ul>
+		</nav>
+	</header>
+<div id="floating-panel">
+      <input id="address" type="textbox" value="Laboratoria, Santiago">
+      <input class="btn btn-rosa" id="submit" type="button" value="Buscar">
+    </div>
+	<div id="map"></div>
+	<script>
+// Note: This example requires that you consent to location sharing when
+// prompted by your browser. If you see the error "The Geolocation service
+// failed.", it means you probably did not give permission for the browser to
+// locate you.
+
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: -33.4190452, lng: -70.6417096},
+    zoom: 17
+  });
+  var geocoder = new google.maps.Geocoder();
+
+ 
+
+
+
+  // Try HTML5 geolocation.
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+
+        var marker = new google.maps.Marker({
+    position: pos,
+    map: map,
+    title: 'Hello World!'
+  });
+      map.setCenter(pos);
+    }, function() {
+      handleLocationError(true, infoWindow, map.getCenter());
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, infoWindow, map.getCenter());
+
+  }
+   document.getElementById('submit').addEventListener('click', function() {
+    geocodeAddress(geocoder, map);
+  });
+
+
+function geocodeAddress(geocoder, resultsMap) {
+  var address = document.getElementById('address').value;
+  geocoder.geocode({'address': address}, function(results, status) {
+    if (status === google.maps.GeocoderStatus.OK) {
+      resultsMap.setCenter(results[0].geometry.location);
+ var marker = new google.maps.Marker({
+        map: resultsMap,
+        position: results[0].geometry.location
+      });
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+
+}
+
+var infoWindow = new google.maps.InfoWindow({map:map});
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+
+
+  infoWindow.setPosition(pos);
+
+  infoWindow.setContent(browserHasGeolocation ?
+                        'Error: La Geolocalizacion fallo.' :
+                        'Error: Su navegador no sopurta la Geolocalizacion.');
+}
+
+}
+    </script>
+	<script 
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDtSxKpHBVch6aPe7KYMFfS5vaqliExk4&callback=initMap" async defer>
+</script>
+
+
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript" src="js/dmenu.js"></script>
+</body>
+</html>
+
