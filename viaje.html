@@ -1,20 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Lyft</title>
-  <link rel="stylesheet" type="text/css" href="css/comun.css">
-	<link rel="stylesheet" type="text/css" href="css/mapa.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/lyft-logo.png">
+    <title>Lyft</title>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/dmenu.css">
+    <link rel="stylesheet" type="text/css" href="css/comun.css">
+    <link rel="stylesheet" type="text/css" href="css/viaje.css">
 </head>
 <body>
-
-	<div class="titulo">
-		Super mapa
-	</div>
+<header>
+		<div class="menu_bar">
+			<a href="#" class="bt-menu"><span class="fa fa-bars"></span>Menú</a>
+		</div>
+ 
+		<nav>
+		<div class="perfil">
+		<img class="img-circle" src="img/OGMFWE0.jpg">
+		Mercedes
+		</div>
+			<ul>
+				<li><a href="index.html"><span class="fa fa-map-marker"></span>Home</a></li>
+				<li><a href="#"><span class="fa fa-gift"></span>Viajes Gratis</a></li>
+				<li><a href="#"><span class="fa fa-clock-o"></span>Historial</a></li>
+				<li><a href="#"><span class="fa fa-credit-card"></span>Formas de pago</a></li>
+				<li><a href="#"><span class="fa fa-question"></span>Ayuda</a></li>
+				<li><a href="#"><span class="fa fa-cogs"></span>Configuración</a></li>
+				<li><a href="#"><span class="fa fa-car"></span>Regístrate para conducir</a></li>
+			</ul>
+		</nav>
+	</header>
 <div id="floating-panel">
       <input id="address" type="textbox" value="Laboratoria, Santiago">
-      <input id="submit" type="button" value="Buscar">
+      <input class="btn btn-rosa" id="submit" type="button" value="Buscar">
     </div>
 	<div id="map"></div>
 	<script>
@@ -93,5 +114,10 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 	<script 
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDtSxKpHBVch6aPe7KYMFfS5vaqliExk4&callback=initMap" async defer>
 </script>
+
+
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript" src="js/dmenu.js"></script>
 </body>
 </html>
+

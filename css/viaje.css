@@ -1,0 +1,27 @@
+html, body { 
+  height: 100%; 
+  margin: 0; 
+  padding: 0; 
+}
+#map {
+ height: 80%; 
+}
+#floating-panel {
+ position: absolute;
+ bottom: 0px;
+ width: 100%;
+ background-color: #e281ae;
+ padding: 5px;
+ text-align: center;
+ font-family: 'Helvetica','sans-serif';
+ line-height: 30px;
+ padding-left: 10px;
+}
+#address{
+  width: 60%;
+  height: 40px;
+  border-radius: 5px; 
+}
+.btn-rosa{
+  width: 30%;
+}
