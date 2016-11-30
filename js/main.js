@@ -1,23 +1,37 @@
+$(document).ready(function(){ 
+  $('#contacto-form').submit(function(ev){  
 
-function validateForm(){
-//Password
-	valpass = document.getElementById("input-password").value;
-	if( valpass == null || valpass.length < 6 || /^\s+$/.test(valpass)) {
-		alert("Su password debe tener minimo 6 caracteres");
-	}
-	if (valpass==="password" || valpass==="123456" || valpass==="098754") {
-		alert("Su password no puede ser 'password', '123456' ni '098754'")
-	}
+        var nom = $('#nombre').val();
+        var corr = $('#correo').val();
+        var check = $('#test5').is(':checked');
+        
+        if (!check) {
+            // aviso al usuario que debe aceptar los terminos
+            $('#mensaje_error').removeClass('hide');
+            $("#mensaje_error").html("Acepte los términos de Lift");
+            // evitar que se mande formulario
+            return false;
+        }
 
-//email
-valemail = document.getElementById("input-email").value;
-	if( !(/\S+@\S+\.\S+/.test(valemail)) ) {
-		alert("Correo no valido");
-	}
-}
-//boton
-var element = document.querySelector(".form-signup");
-element.addEventListener("submit", function(event) {
-  event.preventDefault();
-  validateForm();
+        localStorage.setItem("nombre", nom);
+        localStorage.setItem("correo", corr);
+
+        document.getElementById("nombre").value = "";
+        document.getElementById("correo").value = "";
+  });
+
+
+});
+
+document.getElementById('correo').addEventListener('input', function() {
+   campo = event.target;
+   valido = document.getElementById('emailOK');
+       
+   emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+   //Se muestra un texto a modo de ejemplo, luego va a ser un icono
+   if (emailRegex.test(campo.value)) {
+     valido.innerText = "válido";
+   } else {
+     valido.innerText = "incorrecto";
+   }
 });

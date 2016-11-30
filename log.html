@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="shortcut icon" href="img/lyft-logo.png">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="shortcut icon" href="img/lyft-logo.png">
 	<title>Lyft</title>
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -12,31 +12,34 @@
 </head>
 <body>
 	<header>
-	<div class="row head">
-		<div class="titulo"></i>Regístrate</div>
-		<div class="subtitulo">Unete ahora para obtener créditos gratis</div>
+		<div class="row head">
+			<div class="titulo"></i>Regístrate</div>
+			<div class="subtitulo">Unete ahora para obtener créditos gratis</div>
 		</div>
 		<img class="imglog" src="img/login.png">
 	</header>
-	<form class="form-signup">
-	<div class="input-group margin-bottom-sm caja">
-		<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-		<input id="input-email" class="form-control" type="text" placeholder="Email address">
-	</div>
-	<div class="input-group caja">
-		<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-		<input id="input-password" class="form-control" type="password" placeholder="Password">
-	</div>
-	<div class="checkbox caja">
-		<label>
-			<input type="checkbox"> Estoy de acuerdo con los <a href="#">Términos de Servicio</a> de <span class="lyft"><strong>LIFT</strong></span>
-		</label>
-	</div>
-	<div class="botones">
-		<a href="perfil.html" type="submit" class="btn btn-rosa">Siguiente</a>
-	</div>
+	<form id="contacto-form" action="viaje.html">
+		<div class="input-group margin-bottom-sm caja">
+		<span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
+		<input id="nombre" class="form-control" type="text" name="name" required placeholder="Nombre   Apellido">
+		</div>
+		<div class="input-group margin-bottom-sm caja">
+		<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>   
+			<input id="correo" class="form-control" type="email" name="email" required placeholder="Email">
+			<span id="emailOK"></span>    
+		</div>
+		<span id="mensaje_error" class="hide"></span>
+
+		<div class="check caja">
+			<input type="checkbox" id="test5"/>
+			<label for="test5">Estoy de acuerdo con los <a href="#">Términos de Servicio</a> de <span class="lyft"><strong>LIFT</strong></span>
+		</div>
+		<div class="caja-next botones">
+			<input type="submit" value="Siguiente" class="btn btn-rosa">
+		</div>
 	</form>
-	 <script type='text/javascript' src='js/main.js'></script>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type='text/javascript' src='js/main.js'></script>
 </body>
 </html>
 

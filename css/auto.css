@@ -1,0 +1,46 @@
+body{
+	padding: 10%;
+}
+.fondo{
+	background-color: #ff407b;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.auto{
+	width: 60%;
+	margin:50px auto 40px auto;
+}
+.auto img{
+	width: 100%;
+}
+.logo{
+	width: 20%;
+	margin: 30px auto 30px auto;
+}
+.logo img{
+	width: 100%;
+}
+.sub{
+	color:white;
+	width: 80%;
+	margin: auto;
+	margin-bottom: 30px;
+	text-align: center;
+}
+.todas{
+	font-size: 17px;
+	background-color: #f2dada;
+	color: black;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.exit{
+	text-align: center;
+	font-size: 30px;
+}
+.exit a{
+	text-decoration: none;
+	color: #ff407b;
+}
